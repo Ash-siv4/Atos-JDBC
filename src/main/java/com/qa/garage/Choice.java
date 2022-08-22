@@ -2,11 +2,17 @@ package com.qa.garage;
 
 import java.util.Scanner;
 
+import com.qa.garage.controller.Controller;
+import com.qa.garage.dao.CRUDqueries;
+import com.qa.garage.domain.Vehicle;
+
 public class Choice {
 
 	private static Scanner sc = new Scanner(System.in);
 	Vehicle veh;
 
+	
+	Controller cont;
 	public String getInput() {
 		System.out.println("Enter CRUD choice: ");
 		return sc.nextLine();
@@ -28,18 +34,19 @@ public class Choice {
 				// switch case to match which CRUD operation to perform
 				switch (crud.toLowerCase()) {
 				case "create":
-					System.out.println("Enter model: ");
-					String mod = sc.nextLine();
-					veh.setModel(mod);
-					System.out.println("Enter mileage: ");
-					int miles = sc.nextInt();
-					sc.nextLine();
-					System.out.println("Enter vehicle type: ");
-					String vType = sc.nextLine();
-					System.out.println("Enter doors: ");
-					int door = sc.nextInt();
-					sc.nextLine();
-					q.create(new Vehicle(mod, miles, vType, door));
+//					System.out.println("Enter model: ");
+//					String mod = sc.nextLine();
+//					veh.setModel(mod);
+//					System.out.println("Enter mileage: ");
+//					int miles = sc.nextInt();
+//					sc.nextLine();
+//					System.out.println("Enter vehicle type: ");
+//					String vType = sc.nextLine();
+//					System.out.println("Enter doors: ");
+//					int door = sc.nextInt();
+//					sc.nextLine();
+//					q.create(new Vehicle(mod, miles, vType, door));
+					cont.createCont();
 					break;
 				case "read":
 					q.read();

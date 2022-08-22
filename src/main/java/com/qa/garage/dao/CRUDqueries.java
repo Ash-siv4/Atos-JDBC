@@ -1,10 +1,12 @@
-package com.qa.garage;
+package com.qa.garage.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import com.qa.garage.domain.Vehicle;
 
 public class CRUDqueries {
 
