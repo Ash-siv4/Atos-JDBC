@@ -1,8 +1,8 @@
 package com.qa.garage.controller;
 
-public interface ContollerMethods {
+public interface ContollerMethods<T> {
 
-	void createCont();
+	T createCont();
 
 	void readCont();
 

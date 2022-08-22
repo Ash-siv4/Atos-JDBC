@@ -4,7 +4,7 @@ import com.qa.garage.Scan;
 import com.qa.garage.dao.CRUDqueries;
 import com.qa.garage.domain.Vehicle;
 
-public class Controller implements ContollerMethods {
+public class Controller implements ContollerMethods<Vehicle> {
 
 	 Scan in = new Scan();
 	 Vehicle veh = new Vehicle();
@@ -12,19 +12,19 @@ public class Controller implements ContollerMethods {
 	// create an instance of the CRUD queries class to open the connection
 	 CRUDqueries query = new CRUDqueries();
 
-	public void createCont() {
+	public Vehicle createCont() {
 		System.out.println("Enter model: ");
-		String mod = in.getString();
-		veh.setModel(mod);
+		veh.setModel(in.getString());
 		System.out.println("Enter mileage: ");
-		int miles = in.getInt();
+		veh.setMileage(in.getInt());
 		in.getString();
 		System.out.println("Enter vehicle type: ");
-		String vType = in.getString();
+		veh.setVehicleType(in.getString());
 		System.out.println("Enter doors: ");
-		int door = in.getInt();
+		veh.setDoors(in.getInt());
 		in.getString();
-		query.create(new Vehicle(mod, miles, vType, door));
+		System.out.println(veh.toString());
+		return query.create(veh);
 	}
 
 	public void readCont() {

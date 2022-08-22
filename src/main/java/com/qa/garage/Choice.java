@@ -10,10 +10,8 @@ public class Choice {
 	public void options() {
 
 		// Ask for user input on the CRUD choice in the getInput method and store the
-		// result in the crud variable
-//		String crud = in.getInput();
-		System.out.println("Enter CRUD choice: ");
-		String crud = in.getString();
+		// result in the CRUD variable
+		String crud = in.getInput();
 
 		// try-finally block so the finally block can close the connection
 		try {
@@ -42,8 +40,7 @@ public class Choice {
 				System.out.println("Would you like to continue? (y/n)");
 				String quit = in.getString();
 				if (quit.toLowerCase().equals("y")) {
-//					crud = in.getInput();
-					crud = in.getString();
+					crud = in.getInput();
 				} else if (quit.toLowerCase().equals("n")) {
 					crud = "quit";
 				} else {

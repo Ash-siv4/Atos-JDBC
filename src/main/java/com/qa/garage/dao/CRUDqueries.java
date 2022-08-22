@@ -40,7 +40,7 @@ public class CRUDqueries {
 	// DELETE
 
 	// CREATE - INSERT INTO .... -> returns nothing, just says "query ok"
-	public void create(Vehicle v) {
+	public Vehicle create(Vehicle v) {
 
 //	public void create(String model, int mileage, String vehicleType, int doors) {
 		// info to collect to pass into the database
@@ -60,6 +60,7 @@ public class CRUDqueries {
 			System.out.println("Bad query");
 			e.printStackTrace();
 		}
+		return v;
 	}
 
 	// READ - SELECT ..... -> executeQuery
