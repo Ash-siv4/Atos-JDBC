@@ -3,7 +3,9 @@ package com.qa.garage.domain;
 public class Vehicle {
 
 	// Encapsulation - garage task
+	//modelling the table in out database
 
+	//variables - columns
 	private int id;
 	private String model;
 	private int mileage;
